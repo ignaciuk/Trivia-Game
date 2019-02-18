@@ -8,7 +8,8 @@ $(document).ready(function() {
         answerC: "c) " + "Free Willy",
         answerD: "d) " + "Lil Silly",
         correctAns: "B",
-        info: "b) " + "Philly",
+        info: "Correct answer: " + "b) " + "Philly",
+        trackInfo: "From the track: 'Can't Knock the Hustle'",
         image: "assets/images/philly_steak.jpg",
     };
 
@@ -20,7 +21,8 @@ $(document).ready(function() {
         answerC: "c) " + "Cars",
         answerD: "d) " + "DVRs",
         correctAns: "A",
-        info: "a) " + "VCRs",
+        info: "Correct answer: " + "a) " + "VCRs",
+        trackInfo: "From the track: 'Politics As Usual'",
         image: "assets/images/matching_vcrs.jpeg",
     };
     var questionThree = {
@@ -31,79 +33,93 @@ $(document).ready(function() {
         answerC: "c) " + "Moms",
         answerD: "d) " + "Fonz",
         correctAns: "D",
-        info: "d) " + "Fonz",
+        info: "Correct answer: " + "d) " + "Fonz",
+        trackInfo: "From the track: 'Brooklyn's Finest'",
         image: "assets/images/the_fonz.jpg",
     };
     var questionFour = {
         questionDirections: "Fill in the blank for the missing lyric:",
-        questionText: "",
-        answerA: "",
-        answerB: "",
-        answerC: "",
-        answerD: "",
-        correctAns: "",
-        info: "",
-        image: "",
+        questionText: "Life ills poisoned my body, I used to say @#$% mic skills. I never prayed to God, I prayed to ________",
+        answerA: "a) " + "Nas",
+        answerB: "b) " + "Rakim",
+        answerC: "c) " + "Gotti",
+        answerD: "d) " + "Agnolotti",
+        correctAns: "C",
+        info: "Correct answer: " + "c) " + "Gotti",
+        trackInfo: "From the track: 'D'Evils",
+        image: "assets/images/gotti.jpeg",
     };
     var questionFive = {
-        questionText: "",
-        answerA: "",
-        answerB: "",
-        answerC: "",
-        answerD: "",
-        correctAns: "",
-        info: "",
-        image: "",
+        questionDirections: "Fill in the blank for the missing lyric:",
+        questionText: "Let's do this, it gets tedious.  So I keep one eye open like ________",
+        answerA: "a) " + "CBS",
+        answerB: "b) " + "TBS",
+        answerC: "c) " + "WPIX",
+        answerD: "d) " + "PBS",
+        correctAns: "A",
+        info: "Correct answer: " + "a) " + "CBS",
+        trackInfo: "From the track 'Can I Live'",
+        image: "assets/images/CBS_logo.jpg",
     };
     var questionSix = {
-        questionText: "",
-        answerA: "",
-        answerB: "",
-        answerC: "",
-        answerD: "",
-        correctAns: "",
-        info: "",
-        image: "",
+        questionDirections: "Fill in the blank for the missing lyric:",
+        questionText: "The Soviet, the Unified steady flow.  You already know: you light, I'm heavy, roll heavy dough.  Mic-macheted your flow, your paper falls slow like confetti.  Mine's a steady grow, _________",
+        answerA: "a) " + "perico",
+        answerB: "b) " + "amigo",
+        answerC: "c) " + "politico",
+        answerD: "d) " + "you know",
+        correctAns: "A",
+        info: "Correct answer: " + "a) " + "perico",
+        trackInfo: "From the track 'Dead Presidents II'",
+        image: "assets/images/perico.jpg",
     };
     var questionSeven = {
-        questionText: "",
-        answerA: "",
-        answerB: "",
-        answerC: "",
-        answerD: "",
-        correctAns: "",
-        info: "",
-        image: "",
+        questionDirections: "Fill in the blank for the missing lyric:",
+        questionText: "I make moves that remove pebbles out of ______",
+        answerA: "a) " + "grooves",
+        answerB: "b) " + "smooth",
+        answerC: "c) " + "dudes",
+        answerD: "d) " + "shoes",
+        correctAns: "D",
+        info: "Correct answer: " + "d) " + "shoes",
+        trackInfo: "From the track 'Bring It On'",
+        image: "assets/images/pebble_in_shoe.jpg",
     };
     var questionEight = {
-        questionText: "",
-        answerA: "",
-        answerB: "",
-        answerC: "",
-        answerD: "",
-        correctAns: "",
-        info: "",
-        image: "",
+        questionDirections: "Fill in the blank for the missing lyric:",
+        questionText: "The youth I used to be, soon to see a mill'in.  No more Big Willie, my game has grown.  Prefer you call me _______",
+        answerA: "a) " + "Billy",
+        answerB: "b) " + "Philly",
+        answerC: "c) " + "William",
+        answerD: "d) " + "Sean",
+        correctAns: "C",
+        info: "Correct answer: " + "c) " + "William",
+        trackInfo: "From the track 'Can I Live'",
+        image: "assets/images/william.jpg",
     };
     var questionNine = {
-        questionText: "",
-        answerA: "",
-        answerB: "",
-        answerC: "",
-        answerD: "",
-        correctAns: "",
-        info: "",
-        image: "",
+        questionDirections: "Fill in the blank for the missing lyric:",
+        questionText: "This is the number one rule for your set.  In order to survive, gotta learn to live with _________",
+        answerA: "a) " + "no regrets",
+        answerB: "b) " + "regrets",
+        answerC: "c) " + "the best",
+        answerD: "d) " + "no pets",
+        correctAns: "B",
+        info: "Correct answer: " + "b) " + "regrets",
+        trackInfo: "From the track 'Regrets'",
+        image: "assets/images/Jay_z_cristal.jpg",
     };
     var questionTen = {
-        questionText: "",
-        answerA: "",
-        answerB: "",
-        answerC: "",
-        answerD: "",
-        correctAns: "",
-        info: "",
-        image: "",
+        questionDirections: "Fill in the blank for the missing lyric:",
+        questionText: "Make me wanna holler back at the crib in the sauna.  Prayin' my people bailed out like _________",
+        answerA: "a) " + "Comcast",
+        answerB: "b) " + "Cablevision",
+        answerC: "c) " + "Spectrum",
+        answerD: "d) " + "Time Warner",
+        correctAns: "D",
+        info: "Correct answer: " + "d) " + "Time Warner",
+        trackInfo: "From the track 'Regrets'",
+        image: "assets/images/time_warner.jpg",
     };
 
     var questionBank = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen];
@@ -111,13 +127,13 @@ $(document).ready(function() {
     var correctTotal = 0;
     var incorrectTotal = 0;
     var unansweredTotal = 0;
-
-    console.log(questionBank[count].questionText);
     
+    $("#next-question").hide();
     $(".answer-button").hide();
 
     function displayQuestion() {
         $(".answer-button").show();
+        $("#next-question").show();
         $("#question-directions").text(questionBank[count].questionDirections);
         $("#current-question").text(questionBank[count].questionText);
         $("#answer-a").text(questionBank[count].answerA);
@@ -128,29 +144,34 @@ $(document).ready(function() {
 
     function nextQuestion() {
         count ++;
-        $("#answer-display").hide();
         $("#question-display").show();
         displayQuestion();
     }
 
     function displayAnswer() {
         $("#answer-display").text(questionBank[count].info);
-        $("#image-display").show();
+        $("#answer-display").show();
         $("#image-display").html("<img src=" + questionBank[count].image + " width='400px'>");
+        $("#image-display").show();
+        $("#trackInfo-display").text(questionBank[count].trackInfo);
+        $("#trackInfo-display").show();
     }
 
     $("#start").on("click", function() {
         displayQuestion();
+        $("#start").hide();
     });
 
     $("#next-question").on("click", function() {
         nextQuestion();
         $("#image-display").hide();
+        $("#trackInfo-display").hide();
+        $("#answer-display").hide();
     });
 
     $(".answer-button").on("click", function() {
         $("#question-display").hide();
-        $("#answer-display").show();
+        // $("#answer-display").show();
         displayAnswer();
         answerChoice = $(this).val();
         if (answerChoice === questionBank[count].correctAns) {
@@ -160,7 +181,28 @@ $(document).ready(function() {
             //show incorrectness here somehow
             incorrectTotal ++;
         }
-        console.log("Num Correct: " + correctTotal + " Num Incorrect: " + incorrectTotal);
+        console.log("Num Correct: " + correctTotal + "/ Num Incorrect: " + incorrectTotal);
+    });
+
+    //timer
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            $("#show-timer").text(minutes + ":" + seconds);
+            if (--timer < 0) {
+                timer = duration;
+            }
+        }, 1000);
+    }
+    
+    $("#start").on("click", function() {
+        var tenMinutes = 60 * 10,
+        display = document.querySelector('#time');
+        startTimer(tenMinutes);
     });
 
 });
