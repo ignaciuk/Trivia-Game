@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10">
-                <h1>Do You Know Beyond a REASONABLE DOUBT?</h1>
+                <h1><span id="header-one">Do You Know Beyond a </span> <span id="header-two">REASONABLE DOUBT?</span></h1>
             </div>
             <div class="col-lg-2">
                 <img src="assets/images/cover_art.jpg" id="header-image">
@@ -22,16 +22,16 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="card-body" id="show-timer"></div>
-                <button id="start-btn" type="button" class="btn btn-dark">Start</button>
-                <button id="next-question-btn" type="button" class="btn btn-dark">Next Question</button>
-                <button id="restart-game-btn" type="button" class="btn btn-dark">Restart Game</button>
+                <div class="card-body" id="show-timer">Time remaining: 5:00</div>
+                <button id="start-btn" type="button" class="btn btn-dark border border-white">Start</button>
+                <button id="next-question-btn" type="button" class="btn btn-dark border border-white">Next Question</button>
+                <button id="restart-game-btn" type="button" class="btn btn-dark border border-white">Restart Game</button><br><br>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-9">
                 <div id="question-display">
-                    <div id="question-directions"></div><br>
+                    <div class="card-body" id="question-directions"></div><br>
                     <div class="card-body border border-white" id="current-question"></div><br>
                     <button type="button" class="answer-button btn btn-light" id="answer-a" value="A"></button><br><br>
                     <button type="button" class="answer-button btn btn-light" id="answer-b" value="B"></button><br><br>
@@ -43,7 +43,9 @@
                 <div id="skippedTotal-display"></div><br>
                 <div id="feedback"></div><br>
                 <div id="answer-display"></div><br>
-                <div id="trackInfo-display"></div><br>
+                <div id="trackInfo-display"></div>
+            </div>
+            <div class="col-lg-3">
                 <div id="image-display"></div>
             </div>
         </div>

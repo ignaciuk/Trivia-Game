@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     var questionOne = {
-        questionDirections: "Fill in the blank for the missing lyric:",
+        questionDirections: "Fill in the blank with the missing lyric:",
         questionText: "Chilly with enough bail money to free a big Willie. High stakes, I got more at stake than ___________",
         answerA: "a) " + "Biggie",
         answerB: "b) " + "Philly",
@@ -14,7 +14,7 @@ $(document).ready(function() {
     };
 
     var questionTwo = {
-        questionDirections: "Fill in the blank for the missing lyric:",
+        questionDirections: "Fill in the blank with the missing lyric:",
         questionText: "I wear black a lot, in the Ac, act a lot. Got matchin' ___________, a huge Magnavox",
         answerA: "a) " + "VCRs",
         answerB: "b) " + "Shoes",
@@ -26,7 +26,7 @@ $(document).ready(function() {
         image: "assets/images/matching_vcrs.jpeg",
     };
     var questionThree = {
-        questionDirections: "Fill in the blank for the missing lyric:",
+        questionDirections: "Fill in the blank with the missing lyric:",
         questionText: "Time to separate the pros from the cons. The platinum from the bronze. That butter-soft @#$% from that leather on the ________",
         answerA: "a) " + "Le Mans",
         answerB: "b) " + "Dons",
@@ -35,10 +35,10 @@ $(document).ready(function() {
         correctAns: "D",
         info: "Correct answer: " + "d) " + "Fonz",
         trackInfo: "From the track: 'Brooklyn's Finest'",
-        image: "assets/images/the_fonz.jpg",
+        image: "assets/images/the_fonz_square.jpg",
     };
     var questionFour = {
-        questionDirections: "Fill in the blank for the missing lyric:",
+        questionDirections: "Fill in the blank with the missing lyric:",
         questionText: "Life ills poisoned my body, I used to say @#$% mic skills. I never prayed to God, I prayed to ________",
         answerA: "a) " + "Nas",
         answerB: "b) " + "Rakim",
@@ -46,11 +46,11 @@ $(document).ready(function() {
         answerD: "d) " + "Agnolotti",
         correctAns: "C",
         info: "Correct answer: " + "c) " + "Gotti",
-        trackInfo: "From the track: 'D'Evils",
+        trackInfo: "From the track: 'D'Evils'",
         image: "assets/images/gotti.jpeg",
     };
     var questionFive = {
-        questionDirections: "Fill in the blank for the missing lyric:",
+        questionDirections: "Fill in the blank with the missing lyric:",
         questionText: "Let's do this, it gets tedious.  So I keep one eye open like ________",
         answerA: "a) " + "CBS",
         answerB: "b) " + "TBS",
@@ -62,7 +62,7 @@ $(document).ready(function() {
         image: "assets/images/CBS_logo.jpg",
     };
     var questionSix = {
-        questionDirections: "Fill in the blank for the missing lyric:",
+        questionDirections: "Fill in the blank with the missing lyric:",
         questionText: "The Soviet, the Unified steady flow.  You already know: you light, I'm heavy, roll heavy dough.  Mic-macheted your flow, your paper falls slow like confetti.  Mine's a steady grow, _________",
         answerA: "a) " + "perico",
         answerB: "b) " + "amigo",
@@ -74,7 +74,7 @@ $(document).ready(function() {
         image: "assets/images/perico.jpg",
     };
     var questionSeven = {
-        questionDirections: "Fill in the blank for the missing lyric:",
+        questionDirections: "Fill in the blank with the missing lyric:",
         questionText: "I make moves that remove pebbles out of ______",
         answerA: "a) " + "grooves",
         answerB: "b) " + "smooth",
@@ -86,7 +86,7 @@ $(document).ready(function() {
         image: "assets/images/pebble_in_shoe.jpg",
     };
     var questionEight = {
-        questionDirections: "Fill in the blank for the missing lyric:",
+        questionDirections: "Fill in the blank with the missing lyric:",
         questionText: "The youth I used to be, soon to see a mill'in.  No more Big Willie, my game has grown.  Prefer you call me _______",
         answerA: "a) " + "Billy",
         answerB: "b) " + "Philly",
@@ -98,7 +98,7 @@ $(document).ready(function() {
         image: "assets/images/william.jpg",
     };
     var questionNine = {
-        questionDirections: "Fill in the blank for the missing lyric:",
+        questionDirections: "Fill in the blank with the missing lyric:",
         questionText: "This is the number one rule for your set.  In order to survive, gotta learn to live with _________",
         answerA: "a) " + "no regrets",
         answerB: "b) " + "regrets",
@@ -107,10 +107,10 @@ $(document).ready(function() {
         correctAns: "B",
         info: "Correct answer: " + "b) " + "regrets",
         trackInfo: "From the track 'Regrets'",
-        image: "assets/images/Jay_z_cristal.jpg",
+        image: "assets/images/jayz_ace.jpg",
     };
     var questionTen = {
-        questionDirections: "Fill in the blank for the missing lyric:",
+        questionDirections: "Fill in the blank with the missing lyric:",
         questionText: "Make me wanna holler back at the crib in the sauna.  Prayin' my people bailed out like _________",
         answerA: "a) " + "Comcast",
         answerB: "b) " + "Cablevision",
@@ -119,7 +119,7 @@ $(document).ready(function() {
         correctAns: "D",
         info: "Correct answer: " + "d) " + "Time Warner",
         trackInfo: "From the track 'Regrets'",
-        image: "assets/images/time_warner.jpg",
+        image: "assets/images/time-warner-center.jpg",
     };
 
     var questionBank = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen];
@@ -166,6 +166,7 @@ $(document).ready(function() {
         $("#answer-display").text(questionBank[count].info);
         $("#answer-display").show();
         $("#image-display").html("<img src=" + questionBank[count].image + " width='400px'>");
+        // $("#image-display").html("<img src=" + questionBank[count].image + ">");
         $("#image-display").show();
         $("#trackInfo-display").text(questionBank[count].trackInfo);
         $("#trackInfo-display").show();
@@ -205,12 +206,12 @@ $(document).ready(function() {
     });
 
     //timer
-    function startTimer(duration, display) {
+    function startTimer(duration) {
         var timer = duration, minutes, seconds;
         setInterval(function () {
             minutes = parseInt(timer / 60, 10);
             seconds = parseInt(timer % 60, 10);
-            minutes = minutes < 10 ? "0" + minutes : minutes;
+            // minutes = minutes < 10 ? "0" + minutes : minutes;
             seconds = seconds < 10 ? "0" + seconds : seconds;
             $("#show-timer").text("Time remaining: " + minutes + ":" + seconds);
             if (--timer < 0) {
@@ -222,8 +223,7 @@ $(document).ready(function() {
     }
     
     $("#start-btn").on("click", function() {
-        display = document.querySelector('#time');
-        startTimer(60*10);
+        startTimer(29.9*10);
     });
 
 });
