@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    //each question's content contained in these objects
     var questionOne = {
         questionDirections: "Fill in the blank with the missing lyric:",
         questionText: "Chilly with enough bail money to free a big Willie. High stakes, I got more at stake than ___________",
@@ -122,17 +122,21 @@ $(document).ready(function() {
         image: "assets/images/time-warner-center.jpg",
     };
 
+    //add question object to an array
     var questionBank = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen];
+    //set baseline global variable values
     var count = 0;
     var correctTotal = 0;
     var incorrectTotal = 0;
     var questionsRemaining = 10;
     
+    //hiding buttons that are not necessary at start but are necessary later
     $("#next-question-btn").hide();
     $(".answer-button").hide();
     $("#restart-game-btn").hide();
     $("#current-question").hide();
 
+    //function to display the content necessary for each trivia question
     function displayQuestion() {
         $(".answer-button").show();
         $("#next-question-btn").hide();
@@ -145,11 +149,11 @@ $(document).ready(function() {
         $("#answer-d").text(questionBank[count].answerD);
     }
 
+    //function that moves user to following question and checks if game has ended. If ended, displays stats for the game.
     function nextQuestion() {
         count ++;
         questionsRemaining = 10 - count;
         $("#show-questions-remaining").text("Questions remaining: " + questionsRemaining);
-        console.log(count);
         if (count < 10) {
             $("#question-display").show();
             displayQuestion();
@@ -164,22 +168,25 @@ $(document).ready(function() {
         }
     }
 
+    //function that shows answer inormation for each question, includeing whether user was correct or not.
     function displayAnswer() {
         $("#answer-display").text(questionBank[count].info);
         $("#answer-display").show();
         $("#image-display").html("<img src=" + questionBank[count].image + " width='400px'>");
-        // $("#image-display").html("<img src=" + questionBank[count].image + ">");
         $("#image-display").show();
         $("#trackInfo-display").text(questionBank[count].trackInfo);
         $("#trackInfo-display").show();
         $("#next-question-btn").show();
     }
 
+    //calls function from start button to begin the game and display first question
     $("#start-btn").on("click", function() {
         displayQuestion();
+        startTimer(29.9*10);
         $("#start-btn").hide();
     });
 
+    //calls function to show next question when button is clicked
     $("#next-question-btn").on("click", function() {
         nextQuestion();
         $("#image-display").hide();
@@ -189,6 +196,7 @@ $(document).ready(function() {
 
     });
 
+    //calls function to show answer after user selects an answer choice
     $(".answer-button").on("click", function() {
         $("#question-display").hide();
         // $("#answer-display").show();
@@ -203,11 +211,12 @@ $(document).ready(function() {
         }
     });
 
+    //calls function to restart game once user has reached the end of the game.
     $("#restart-game-btn").on("click", function() {
         location.reload();
     });
 
-    //timer
+    //function that runs timer for the game
     function startTimer(duration) {
         var timer = duration, minutes, seconds;
         setInterval(function () {
@@ -223,8 +232,9 @@ $(document).ready(function() {
         }, 1000);
     }
     
-    $("#start-btn").on("click", function() {
-        startTimer(29.9*10);
-    });
+    //
+    // $("#start-btn").on("click", function() {
+    //     // startTimer(29.9*10);
+    // });
 
 });
