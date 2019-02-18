@@ -29,6 +29,10 @@ div {
     font-size: 2rem;
 }
 
+#show-questions-remaining {
+    font-size: 2rem;
+}
+
 #image-display {
     position: relative;
     float: right;

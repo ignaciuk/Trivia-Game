@@ -126,7 +126,7 @@ $(document).ready(function() {
     var count = 0;
     var correctTotal = 0;
     var incorrectTotal = 0;
-
+    var questionsRemaining = 10;
     
     $("#next-question-btn").hide();
     $(".answer-button").hide();
@@ -147,6 +147,8 @@ $(document).ready(function() {
 
     function nextQuestion() {
         count ++;
+        questionsRemaining = 10 - count;
+        $("#show-questions-remaining").text("Questions remaining: " + questionsRemaining);
         console.log(count);
         if (count < 10) {
             $("#question-display").show();
