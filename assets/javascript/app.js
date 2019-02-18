@@ -126,7 +126,6 @@ $(document).ready(function() {
     var count = 0;
     var correctTotal = 0;
     var incorrectTotal = 0;
-    // var skippedTotal = 10 - (correctTotal + incorrectTotal);
 
     
     $("#next-question-btn").hide();
@@ -153,9 +152,11 @@ $(document).ready(function() {
             $("#question-display").show();
             displayQuestion();
         }
-        else if (count === 10) {
+        else if (count >= 10) {
+            var skippedTotal = 10 - (correctTotal + incorrectTotal);
             $("#correctTotal-display").text("Correct: " + correctTotal);
             $("#incorrectTotal-display").text("Incorrect: " + incorrectTotal);
+            $("#skippedTotal-display").text("Skipped: " + skippedTotal);
             $("#next-question-btn").hide();
             $("#restart-game-btn").show();
         }
@@ -213,7 +214,9 @@ $(document).ready(function() {
             seconds = seconds < 10 ? "0" + seconds : seconds;
             $("#show-timer").text("Time remaining: " + minutes + ":" + seconds);
             if (--timer < 0) {
-                timer = duration;
+                count = 10;
+                $("#show-timer").hide();
+                $("#next-question-btn").show();
             }
         }, 1000);
     }
