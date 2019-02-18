@@ -126,14 +126,16 @@ $(document).ready(function() {
     var count = 0;
     var correctTotal = 0;
     var incorrectTotal = 0;
-    var unansweredTotal = 0;
+    // var skippedTotal = 10 - (correctTotal + incorrectTotal);
+
     
-    $("#next-question").hide();
+    $("#next-question-btn").hide();
     $(".answer-button").hide();
+    $("#restart-game-btn").hide();
 
     function displayQuestion() {
         $(".answer-button").show();
-        $("#next-question").show();
+        $("#next-question-btn").hide();
         $("#question-directions").text(questionBank[count].questionDirections);
         $("#current-question").text(questionBank[count].questionText);
         $("#answer-a").text(questionBank[count].answerA);
@@ -144,8 +146,17 @@ $(document).ready(function() {
 
     function nextQuestion() {
         count ++;
-        $("#question-display").show();
-        displayQuestion();
+        console.log(count);
+        if (count < 10) {
+            $("#question-display").show();
+            displayQuestion();
+        }
+        else if (count === 10) {
+            $("#correctTotal-display").text("Correct: " + correctTotal);
+            $("#incorrectTotal-display").text("Incorrect: " + incorrectTotal);
+            $("#next-question-btn").hide();
+            $("#restart-game-btn").show();
+        }
     }
 
     function displayAnswer() {
@@ -155,14 +166,15 @@ $(document).ready(function() {
         $("#image-display").show();
         $("#trackInfo-display").text(questionBank[count].trackInfo);
         $("#trackInfo-display").show();
+        $("#next-question-btn").show();
     }
 
-    $("#start").on("click", function() {
+    $("#start-btn").on("click", function() {
         displayQuestion();
-        $("#start").hide();
+        $("#start-btn").hide();
     });
 
-    $("#next-question").on("click", function() {
+    $("#next-question-btn").on("click", function() {
         nextQuestion();
         $("#image-display").hide();
         $("#trackInfo-display").hide();
@@ -175,13 +187,14 @@ $(document).ready(function() {
         displayAnswer();
         answerChoice = $(this).val();
         if (answerChoice === questionBank[count].correctAns) {
-            //show correctness here somehow
             correctTotal ++;
         } else {
-            //show incorrectness here somehow
             incorrectTotal ++;
         }
-        console.log("Num Correct: " + correctTotal + "/ Num Incorrect: " + incorrectTotal);
+    });
+
+    $("#restart-game-btn").on("click", function() {
+        location.reload();
     });
 
     //timer
@@ -192,17 +205,16 @@ $(document).ready(function() {
             seconds = parseInt(timer % 60, 10);
             minutes = minutes < 10 ? "0" + minutes : minutes;
             seconds = seconds < 10 ? "0" + seconds : seconds;
-            $("#show-timer").text(minutes + ":" + seconds);
+            $("#show-timer").text("Time remaining: " + minutes + ":" + seconds);
             if (--timer < 0) {
                 timer = duration;
             }
         }, 1000);
     }
     
-    $("#start").on("click", function() {
-        var tenMinutes = 60 * 10,
+    $("#start-btn").on("click", function() {
         display = document.querySelector('#time');
-        startTimer(tenMinutes);
+        startTimer(60*10);
     });
 
 });

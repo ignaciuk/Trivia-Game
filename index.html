@@ -7,8 +7,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Freckle+Face" rel="stylesheet">     -->
-    <title>Trivia Game</title>
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme|Bungee|Bungee+Shade" rel="stylesheet">    <title>Trivia Game</title>
 </head>
 <body>
     <div class="container">
@@ -20,8 +19,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div id="show-timer"></div>
-                <button id="start">Start</button>
-                <button id="next-question">Next Question</button>
+                <button id="start-btn">Start</button>
+                <button id="next-question-btn">Next Question</button>
+                <button id="restart-game-btn">Restart Game</button>
             </div>
         </div>
         <div class="row">
@@ -34,9 +34,13 @@
                     <button class="answer-button" id="answer-c" value="C"></button><br>
                     <button class="answer-button" id="answer-d" value="D"></button><br>
                 </div>
+                <div id="correctTotal-display"></div>
+                <div id="incorrectTotal-display"></div>
+                <div id="skippedTotal-display"></div>
                 <div id="answer-display"></div>
                 <div id="trackInfo-display"></div>
                 <div id="image-display"></div>
+
             </div>
         </div>
     </div>
