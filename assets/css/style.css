@@ -1,6 +1,23 @@
-/* font-family: 'Bungee', cursive;
-font-family: 'BioRhyme', serif; */
+body {
+    background-color: #333;
+}
 
 h1 {
     font-family: 'Bungee Shade', cursive;
+    color: #fff;
+    font-size: 3.5em;
 }
+
+div {
+    font-family: 'BioRhyme', cursive;
+    color: #FFF;
+}
+
+#header-image {
+    height: 10em;
+}
+
+#show-timer {
+    font-size: 2em;
+}
+

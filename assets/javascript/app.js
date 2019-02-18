@@ -132,11 +132,13 @@ $(document).ready(function() {
     $("#next-question-btn").hide();
     $(".answer-button").hide();
     $("#restart-game-btn").hide();
+    $("#current-question").hide();
 
     function displayQuestion() {
         $(".answer-button").show();
         $("#next-question-btn").hide();
         $("#question-directions").text(questionBank[count].questionDirections);
+        $("#current-question").show();
         $("#current-question").text(questionBank[count].questionText);
         $("#answer-a").text(questionBank[count].answerA);
         $("#answer-b").text(questionBank[count].answerB);
@@ -179,6 +181,8 @@ $(document).ready(function() {
         $("#image-display").hide();
         $("#trackInfo-display").hide();
         $("#answer-display").hide();
+        $("#feedback").empty();
+
     });
 
     $(".answer-button").on("click", function() {
@@ -187,8 +191,10 @@ $(document).ready(function() {
         displayAnswer();
         answerChoice = $(this).val();
         if (answerChoice === questionBank[count].correctAns) {
+            $("#feedback").text("That's right!");
             correctTotal ++;
         } else {
+            $("#feedback").text("Wrong");
             incorrectTotal ++;
         }
     });
